@@ -128,13 +128,13 @@ iframe {
 
 footer {
 	height: 100px;
-	background-color: #001bff;
+	background-color: #6a1ebc;
 }
 
 #complete {
-	background-color: green;
+	background-color: rgb(101, 7, 164);
 }
 
 #incomplete {
-	background-color: red;
+	background-color: rgb(0, 0, 255);
 }
