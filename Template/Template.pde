@@ -27,16 +27,20 @@ void setup() {
  musicButtonY = divY;
  musicButtonWidth = smallerSide;
  musicButtonHeight = smallerSide;
+ /*
  stopX = ;
  stopY = ;
  stopWidth = ;
  stopHeight = ;
+ */
   //
   //DIVs: musicButtonDIV
  // rect(X, Y, Width, Height);
   rect(divX, divY, divWidth, divHeight);
   rect (musicButtonX, musicButtonY, musicButtonWidth, musicButtonHeight);
-  rect(stopX, stopY, stopWidth, stopHeight);
+  //rect(stopX, stopY, stopWidth, stopHeight);
+//  triangle(fastForward1X1, fastForward1Y1, fastForward1X2, fastForward1Y2, fastForward1X3, fastForward1Y3 );
+  //triangle(fastForward2X1, fastForward2Y1, fastForward2X2, fastForward2Y2, fastForward2X3, fastForward2Y3 );
 } //End setup
 //
 void draw() {

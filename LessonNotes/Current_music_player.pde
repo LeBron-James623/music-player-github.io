@@ -4,9 +4,23 @@
 //
 //Global Variables
 int appWidth, appHeight;
-float imageX, imageY, imageWidth, imageHeight, ttX, ttY, ttWidth, ttHeight, tpX, tpY, tpWidth, tpHeight, ffX, ffimageY, ffimageWidth, ffimageHeight;
-float titleX, titleY, titleWidth, titleHeight, trX, trY, trWidth, trHeight, timebarX, timebarY, timebarWidth, timebarHeight;
-float X, Y, Width, Height, quitX, quitY, quitWidth, quitHeight, muteX, muteY, muteWidth, muteHeight, ppX, ppY, ppWidth, ppHeight;
+float imageX, imageY, imageWidth, imageHeight;
+float totalTimeX, totalTimeY, totalTimeWidth, totalTimeHeight;
+float timePlayedX, timePlayedY, timePlayedWidth, timePlayedHeight;
+float fastForwardX, fastForwardY, fastForwardWidth, fastForwardHeight;
+float titleX, titleY, titleWidth, titleHeight;
+float timeRemainingX, timeRemainingY, timeRemainingWidth, timeRemainingHeight;
+float timebarX, timebarY, timebarWidth, timebarHeight;
+float X, Y, Width, Height;
+float quitX, quitY, quitWidth, quitHeight;
+float muteX, muteY, muteWidth, muteHeight;
+float pauseplayX, pauseplayY, pauseplayWidth, pauseplayHeight;
+float RewindX, RewindY, RewindWidth, RewindHeight;
+float loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight;
+float loopInfiniteX, loopInfiniteY, loopInfiniteWidth, loopInfiniteHeight;
+float PreviousX, PreviousY, PreviousWidth, PreviousHeight;
+float ShuffleX, ShuffleY, ShuffleWidth, ShuffleHeight;
+float NextX, NextY, NextWidth, NextHeight;
 
 //
 void setup() {
@@ -28,50 +42,64 @@ void setup() {
  muteY = appHeight * 0.13;
  muteWidth = appWidth * 0.09;
  muteHeight = appHeight * 0.04;
- trX = appWidth * 0.64; 
- trY = appHeight * 0.35;
- trWidth = appWidth * 0.11;
- trHeight = appHeight * 0.09;
- ttX = appWidth * 0.75; 
- ttY = appHeight * 0.35;
- ttWidth = appWidth * 0.10;
- ttHeight = appHeight * 0.09;
- tpX = appWidth * 0.13; 
- tpY = appHeight * 0.38;
- tpWidth = appWidth * 0.09;
- tpHeight = appHeight * 0.10;
+ timeRemainingX = appWidth * 0.64; 
+ timeRemainingY = appHeight * 0.35;
+ timeRemainingWidth = appWidth * 0.11;
+ timeRemainingHeight = appHeight * 0.09;
+ totalTimeX = appWidth * 0.75; 
+ totalTimeY = appHeight * 0.35;
+ totalTimeWidth = appWidth * 0.10;
+ totalTimeHeight = appHeight * 0.09;
+ timePlayedX = appWidth * 0.13; 
+ timePlayedY = appHeight * 0.38;
+ timePlayedWidth = appWidth * 0.09;
+ timePlayedHeight = appHeight * 0.10;
  timebarX = appWidth * 0.23; 
  timebarY = appHeight * 0.46;
  timebarWidth = appWidth * 0.49;
  timebarHeight = appHeight * 0.02;
- ppX = appWidth * 0.46; 
- ppY = appHeight * 0.55;
- ppWidth = appWidth * 0.04;
- ppHeight = appHeight * 0.05;
+ pauseplayX = appWidth * 0.46; 
+ pauseplayY = appHeight * 0.55;
+ pauseplayWidth = appWidth * 0.04;
+ pauseplayHeight = appHeight * 0.05;
+ ShuffleX = appWidth * 0.16; 
+ ShuffleY = appHeight * 0.55;
+ ShuffleWidth = appWidth * 0.10;
+ ShuffleHeight = appHeight * 0.05;
+ PreviousX = appWidth * 0.40 ;
+ PreviousY  = appHeight * 0.55 ;
+ PreviousWidth = appWidth * 0.04 ;
+ PreviousHeight = appHeight * 0.05;
+ RewindX = appWidth * ;
+ RewindY = appHeight * ;
+ RewindWidth = appWidth * ;
+ RewindHeight = appHeight * ;
   //Display
   fullScreen();
-  rect(trX, trY, trWidth, trHeight);
+  rect(timeRemainingX, timeRemainingY, timeRemainingWidth, timeRemainingHeight);
   rect(titleX, titleY, titleWidth, titleHeight);
   rect(quitX, quitY, quitWidth, quitHeight);
   rect(imageX, imageY, imageWidth, imageHeight); 
   rect(muteX, muteY, muteWidth, muteHeight);
   rect(X, Y, Width, Height);
-  rect(tpX, tpY, tpWidth, tpHeight);
+  rect(timePlayedX, timePlayedY, timePlayedWidth, timePlayedHeight);
   rect(timebarX, timebarY, timebarWidth, timebarHeight);
   rect(X, Y, Width, Height);
   rect(imageX, imageY, imageWidth, imageHeight);
-  rect(ttX, ttY, ttWidth, ttHeight);
-  rect(ppX, ppY, ppWidth, ppHeight);
-  rect(ffX, ffimageY, ffimageWidth, ffimageHeight);
+  rect(totalTimeX, totalTimeY, totalTimeWidth, totalTimeHeight);
+  rect(pauseplayX, pauseplayY, pauseplayWidth, pauseplayHeight);
+  rect(fastForwardX, fastForwardY, fastForwardWidth, fastForwardHeight);
+  rect(NextX, NextY, NextWidth, NextHeight);
+  rect(ShuffleX, ShuffleY, ShuffleWidth, ShuffleHeight);
+  rect(PreviousX, PreviousY, PreviousWidth, PreviousHeight);
+  rect(loopInfiniteX, loopInfiniteY, loopInfiniteWidth, loopInfiniteHeight);
+  rect(loopOnceX, loopOnceY, loopOnceWidth, loopOnceHeight);
+  rect(RewindX, RewindY, RewindWidth, RewindHeight);
+  rect(X, Y, Width, Height);
+  rect(X, Y, Width, Height);
+  rect(X, Y, Width, Height);
  //Display
-  fullScreen();
-  appWidth = displayWidth;
-  appHeight = displayHeight;
-  //
-  imageX = displayWidth*0.16;
-  imageY = displayHeight*0.55;
-  imageWidth = displayWidth*0.12;
-  imageHeight = displayHeight*0.05;
+
   //
   rect(imageX, imageY, imageWidth, imageHeight);
    //Display
@@ -84,17 +112,7 @@ void setup() {
   imageWidth = displayWidth*0.08;
   imageHeight = displayHeight*0.05;
   //
-  rect(imageX, imageY, imageWidth, imageHeight);
-   //Display
-  fullScreen();
-  appWidth = displayWidth;
-  appHeight = displayHeight;
-  //
-  imageX = displayWidth*0.40;
-  imageY = displayHeight*0.55;
-  imageWidth = displayWidth*0.04;
-  imageHeight = displayHeight*0.05;
-  //
+  
   rect(imageX, imageY, imageWidth, imageHeight);
      //Display
   fullScreen();
