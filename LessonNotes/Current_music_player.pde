@@ -21,11 +21,26 @@ float loopInfiniteX, loopInfiniteY, loopInfiniteWidth, loopInfiniteHeight;
 float PreviousX, PreviousY, PreviousWidth, PreviousHeight;
 float ShuffleX, ShuffleY, ShuffleWidth, ShuffleHeight;
 float NextX, NextY, NextWidth, NextHeight;
+//buttons
+float divX, divY, divWidth, divHeight;
+float musicButtonX, musicButtonY, musicButtonWidth, musicButtonHeight;
 
 //
 void setup() {
  int appWidth = displayWidth;
  int appHeight = displayHeight;
+ //
+ //Population
+  divX = appWidth*1/4;
+  divY = appHeight*1/4;
+  divWidth = appWidth*1/2;
+  divHeight = appHeight*1/2;
+  //
+ float smallerSide = ( divWidth < divHeight ) ? divWidth : divHeight ; //Ternary Operator
+  musicButtonX = divX;
+  musicButtonY = divY;
+  musicButtonWidth = smallerSide;
+  musicButtonHeight = smallerSide;
  X = appWidth * 0.17; 
  Y = appHeight * 0.20;
  Width = appWidth * 0.67;
@@ -70,10 +85,12 @@ void setup() {
  PreviousY  = appHeight * 0.55 ;
  PreviousWidth = appWidth * 0.04 ;
  PreviousHeight = appHeight * 0.05;
+ /*
  RewindX = appWidth * ;
  RewindY = appHeight * ;
  RewindWidth = appWidth * ;
  RewindHeight = appHeight * ;
+ */
   //Display
   fullScreen();
   rect(timeRemainingX, timeRemainingY, timeRemainingWidth, timeRemainingHeight);
