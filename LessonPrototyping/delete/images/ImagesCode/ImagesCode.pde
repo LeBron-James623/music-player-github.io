@@ -3,29 +3,30 @@
 //Library - Minim
 //
 //Global Variables
+int appWidth, appHeight;
 float imageDIVX, imageDIVY, imageDIVWidth, imageDIVHeight;
 //
 PImage theImage;
 void setup() {
   //Display
   fullScreen();
-  appWidth = ;
-  appHeight = ;
+  appWidth = displayWidth;
+  appHeight = displayHeight;
   //
   //Population
-  imageDIVX = ; 
-  imageDIVY = ; 
-  imageDIVWidth = ;
-  imageDIVHeight = ;
+  imageDIVX = appWidth*1/4; 
+  imageDIVY = appHeight*1/4; 
+  imageDIVWidth = appWidth*1/2;
+  imageDIVHeight = appHeight*1/2;
   //
   //Image aspect ratio algorithm
-  String theImage = ;
-  theImage = ;
+  String theImagePathway = ;
+ // theImage = ;
   //DIV
   rect(imageDIVX, imageDIVY, imageDIVWidth, imageDIVHeight);
   //
   //Prototype Images
-  image(theImage, imageDIVX, imageDIVY, imageDIVWidth, imageDIVHeight);
+ // image(theImage, imageDIVX, imageDIVY, imageDIVWidth, imageDIVHeight);
 } //End setup
 //
 void draw() {
