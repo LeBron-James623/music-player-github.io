@@ -1,6 +1,6 @@
 // Text: Static
 //
-String title = "Porsche";
+String title = "Porsche 911 GT3 RS";
 //
 //Display
 //fullScreen();
@@ -29,8 +29,16 @@ titleHeight = appHeight*1/10;
 rect(titleX, titleY, titleWidth, titleHeight);
 //
 //Font Size Algorithm
-fontSize = titleHeight+3; //Extra Valye "Cuts the Mullet OFF"
-
+float TimesNewRomanAspectRatio = 1.09 ;
+fontSize = titleHeight * TimesNewRomanAspectRatio; 
+textFont(titleFont, fontSize);
+println( textWidth(title), titleWidth );
+if ( textWidth(title) > titleWidth ) {
+  fontSize = fontSize * 0.76;
+  textFont(titleFont, fontSize);
+  println("Step:", textWidth(title), titleWidth);
+}
+//O.76
 color purpleInk = #2C08FF;
 fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
