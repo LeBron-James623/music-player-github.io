@@ -20,7 +20,11 @@ void setup() {
   imageDIVHeight = appHeight*1/2;
   //
   //Image aspect ratio algorithm
-  String theImagePathway = ;
+  String upArrow = "../../../../../../";
+  String folders = "Images Folder/";
+  String KissDestroyerAlbumCover = "Kiss-Destroyer-album-cover";
+  String fileExtension = ".jpg";
+  String myImagePathway = ;
  // theImage = ;
   //DIV
   rect(imageDIVX, imageDIVY, imageDIVWidth, imageDIVHeight);
